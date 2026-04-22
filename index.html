@@ -1,42 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-   
-  <title>EDS Practice</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  
+  <title>Kalyan | Frontend Developer</title>
+  <meta name="description" content="Kalyan Portfolio">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <div class="header" data-block-name="header"></div>
+  <!-- Header -->
+  <div class="header" data-block-name="header"></div>
 
   <h1>My First EDS Block</h1>
 
-  <div class="hero" data-block-name="hero">
-  <h1>Welcome to My EDS Site</h1>
-  <p>This is my first multi-block project</p>
-</div>
+  <!-- Hero -->
+  <div class="hero" data-block-name="hero"></div>
 
-  <div class="cards" data-block-name="cards">
-  <ul>
-    <li>
-      <img src="https://picsum.photos/150">
-      <h3>Card 1</h3>
-      <p>Description 1</p>
-    </li>
+  <!-- Cards -->
+  <div id="cards" class="cards" data-block-name="cards">
+    <ul>
+      <li>
+        <img src="https://picsum.photos/300" loading="lazy">
+        <h3>Project 1</h3>
+        <p>My first project description</p>
+      </li>
+      <li>
+        <img src="https://picsum.photos/300" loading="lazy">
+        <h3>Project 2</h3>
+        <p>My second project description</p>
+      </li>
+    </ul>
+  </div>
 
-    <li>
-      <img src="https://picsum.photos/150">
-      <h3>Card 2</h3>
-      <p>Description 2</p>
-    </li>
-  </ul>
-</div>
+  <!-- Features -->
+  <div class="features" data-block-name="features"></div>
 
-<div class="footer" data-block-name="footer"></div>
+  <!-- Footer -->
+  <div id="footer" class="footer" data-block-name="footer"></div>
 
- <script src="scripts.js"></script>
- <script type="module" src="scripts.js"></script>
+  <script type="module" src="scripts.js"></script>
 </body>
 </html>

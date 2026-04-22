@@ -1,5 +1,6 @@
 export default function decorate(block) {
   block.innerHTML = `
-    <p>© 2026 My EDS Project</p>
+    <h2>Features</h2>
+    <p>This site uses modular EDS blocks.</p>
   `;
 }

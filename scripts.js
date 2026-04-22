@@ -1,22 +1,20 @@
-async function loadBlocks() {
-  const blocks = document.querySelectorAll('[data-block-name]');
+async function loadBlock(block) {
+  const name = block.dataset.blockName;
 
-  for (const block of blocks) {
-    const blockName = block.dataset.blockName;
-
+  try {
     // Load CSS
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = `blocks/${blockName}/${blockName}.css`;
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = `blocks/${name}/${name}.css`;
     document.head.appendChild(link);
 
-    // Import JS module
-    const module = await import(`./blocks/${blockName}/${blockName}.js`);
-    
-    if (module.default) {
-      module.default(block);
-    }
+    // Load JS
+    const module = await import(`./blocks/${name}/${name}.js`);
+    module.default(block);
+
+  } catch (err) {
+    console.error(`Error loading block: ${name}`, err);
   }
 }
 
-window.onload = loadBlocks;
+document.querySelectorAll("[data-block-name]").forEach(loadBlock);
